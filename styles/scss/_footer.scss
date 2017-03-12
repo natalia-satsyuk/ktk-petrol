@@ -1,0 +1,59 @@
+//FOOTER
+footer nav {
+	width: 100%;
+	padding-top: 20px;
+}
+
+.footer-logo {
+	@include respond-to(desktop){
+		text-align: center;
+	}
+}
+
+.footer-glyanets {
+	padding: 5px 5px 10px 0;
+}
+
+.footer-glyanets-link {
+	display: inline-block;
+	padding-left: 12%;
+	font: 12px 'Cuprum', sans-serif;;
+	text-transform: uppercase;
+	color: #b5b8bb;
+
+	@include respond-to(desktop){
+		padding-left: 5px;
+	}
+
+	&:before {
+		content: "";
+		display: inline-block;
+		padding-right: 5px;
+		width: 15px;
+		height: 14px;
+		vertical-align: middle;
+		background: url("../../images/glyanets.png") center no-repeat;
+	}
+}
+
+.footer-socials {
+	float: right;
+	padding-left: 20px;
+}
+
+.footer-socials-link {
+	display: block;
+	padding: 3px;
+	font-size: 20px;
+	color: #ccc;
+	text-align: center;
+
+	&:last-child:hover {
+		color: #ff850e;
+	}
+}
+
+.footer-aside {
+	padding-top: 10px;
+}
+//end of FOOTER

@@ -1,0 +1,60 @@
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: none;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 18px; height: 18px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '';
+  position: absolute;
+  top: .1em; left: .3em;
+  transition: all .2s;
+  width: 12px;
+  height: 12px;
+  background: url("../../images/check.png") center no-repeat;
+}
+
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+
+
+
+
+
+

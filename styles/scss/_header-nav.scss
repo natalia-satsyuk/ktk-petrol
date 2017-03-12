@@ -1,0 +1,172 @@
+// HEADER
+.header-main,
+.header-contacts {
+	padding: 15px 0 5px;
+}
+
+.header-logo {
+	padding-bottom: 10px;
+	
+	@include respond-to(wide){
+		text-align: center;
+	}
+}
+
+.header-slogan,
+nav {
+	display: inline-block;
+} 
+
+.header-slogan {
+	width: 29%;
+
+	@include respond-to(tablet){
+		display: block;
+		margin: 0 auto;
+	}
+
+	@include respond-to(mobile){
+		width: 100%;
+		text-align: center;
+	}
+}
+
+nav {
+	width: 70%;
+	position: relative; //for pop-up-menu
+
+	@include respond-to(tablet){
+		width: 100%;
+	}
+}
+
+.header-slogan-text {
+	padding-bottom: 15px;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.header-slogan-link {
+	text-decoration: underline;
+	color: $color-upper-line;
+
+	&:before {
+		content: "";
+		background: url("../../images/marker.png");
+		display: inline-block;
+		vertical-align: middle;
+		width: 18px;
+		height: 27px;
+		margin-right: 5px;
+	}
+}
+
+.pop-up-menu {
+	display: none;
+
+	@include respond-to(mobile){
+		display: block;
+	    padding-top: 15px;
+	    font-size: 25px;
+	    cursor: pointer;
+	    text-align: center;
+	}
+
+	span {
+		font: 30px Roboto;
+    	padding-left: 10px;
+	}
+}
+
+.header-nav-list {
+	font-size: 0;
+
+	@include respond-to(tablet){
+		text-align: center;
+	}
+
+	@include respond-to(mobile){
+		display: none;
+		position: absolute;
+		background-color: rgba(139,139,139,.95);
+		z-index: 6;
+		padding: 10px 0;
+	}
+}
+
+.header-nav-item {
+	display: inline-block;
+	width: 36%;
+	line-height: 30px;
+
+	&:nth-child(3n+1) {
+		width: 28%;
+	}
+
+	&:last-child {
+		padding-left: 10px;
+		margin-left: -30px;
+		background-color: #F5F8FA;
+
+		@include respond-to(tablet){
+			margin-left: 0;
+		}
+
+		@include respond-to(mobile){
+			background-color: transparent;
+		}
+	}
+
+	@include respond-to(mobile){
+		width: 100%;
+	}
+}
+
+.header-nav-link {
+	vertical-align: middle;
+	font-size: 14px;
+	text-decoration: none;
+	color: black;
+
+	span {
+		font-weight: 700;
+		font-style: italic;
+		color: $color-upper-line;
+		text-transform: uppercase;
+	}
+}
+
+.header-nav-link-personal:before {
+	content: "";
+	background: url("../../images/person.png");
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 18px;
+	margin-right: 5px;
+}
+
+.header-contacts {
+	text-align: right;
+
+	@include respond-to(wide){
+		text-align: center;
+	}
+}
+
+.header-contacts-tel {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 30px;
+}
+
+.header-contacts-link {
+	color: #337ab7;
+	text-decoration: underline;
+}
+
+address,
+.header-contacts-link {
+	line-height: 30px;
+}
+// end of HEADER

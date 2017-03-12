@@ -1,0 +1,480 @@
+@import '../scss/general';
+@import '../scss/header-nav';
+@import '../scss/footer';
+@import '../scss/checkbox';
+@import '../scss/range';
+
+//BANNER
+.banner {
+	background: url("../../images/bg-main.png") center;
+	background-size: cover;
+}
+
+.row-banner {
+	height: 570px;
+	position: relative;
+
+	@include respond-to(tablet){
+		height: 665px;
+	}
+
+	@include respond-to(mobile){
+		height: 710px;
+	}
+}
+
+.banner-about {
+	text-align: right;
+
+	@include respond-to(wide){
+		background: rgba(255,255,255,.8);
+		padding: 25px 15px;
+	}
+}
+
+.banner-heading {
+	@extend .heading;
+	color: black;
+}
+
+.banner-block-table {
+	width: 216px;
+	position: absolute;
+	bottom: 3%;
+	left: 9%;
+    background: repeating-linear-gradient(90deg, #e2e2e2, #bababa 3%, #dfdfdf 10%);
+}
+
+.banner-table {
+	width: 176px;
+	margin: 0 auto;
+	
+	td {
+		position: relative;
+		text-align: center;
+   	    vertical-align: middle;
+        padding: 5px;
+        border: 3px solid white;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.59);
+		color: #cf0000;
+		font-size: 9px;
+		font-weight: 900;
+		text-transform: uppercase;
+		background: linear-gradient(#bababa,#d2d2d2);
+
+		span {
+			font-size: 26px;
+			font-weight: 500;
+		}
+	}
+
+	.banner-table-numbs {
+		width: 67%;
+		font-size: 34px;
+		font-weight: 500;
+		text-transform: uppercase;
+		background: #320000;
+		color: #fd0000;
+		text-shadow: none;
+	}
+
+	.banner-bg-1 {
+		background: url("../../images/table-petrol-1.png");
+	}
+
+	.banner-bg-2 {
+		background: url("../../images/table-petrol-2.png");
+	}
+
+	.banner-bg-3 {
+		background: url("../../images/table-petrol-3.png");
+	}
+}
+
+.banner-table-image {
+	position: absolute;
+	z-index: 2;
+    left: -40%;
+    bottom: 10%;
+}
+
+.banner-bg-1,
+.banner-bg-2,
+.banner-bg-3 {
+	height: 51px;
+}
+
+.banner-table-grass {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+}
+//end of BANNER
+
+//BENEFITS
+.benefits {
+	background: url("../../images/bg.png");
+
+	.heading {
+		text-align: center;
+		padding: 15px 165px 25px 0;
+	}
+}
+
+.row-benefits {
+	position: relative;
+}
+
+.benefits-image {
+	position: absolute;
+	top: -65%;
+	left: 65%;
+
+	@include respond-to(wide){
+		width: 20%;
+		left: 70%;
+	}
+
+	@include respond-to(tablet){
+		top: -5%;
+		z-index: 4;
+	}
+
+	@include respond-to(mobile){
+		width: 25%;
+		top: -25%;
+	}
+}
+
+.benefits-item {
+	text-align: center;
+}
+
+.benefits-text {
+	padding: 15px 30px;
+	font-size: 16px;
+	font-weight: 700;
+	color: $color-word;
+}
+
+.benefits-culc {
+	width: 60%;
+	margin: 40px auto 90px;
+	padding: 20px 20px 20px 25px;
+	border-radius: 8px;
+	box-shadow: 0 1px 6px rgba(7, 8, 8, 0.15);
+	background-color: white;
+
+	@include respond-to(wide){
+		width: 45%;
+	}
+
+	@include respond-to(tablet){
+		width: 90%;
+	}
+
+	@include respond-to(mobile){
+		width: 100%;
+	}
+}
+
+.table-choose, 
+.table-result {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.table-petrol {
+	width: 50px;
+	padding: 10px 20px 10px 0;
+	font-size: 9px;
+	color: #8696a7;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.table-petrol-name {
+	@extend .table-petrol;
+	color: #2c3134;
+
+	span {
+		font-size: 24px;
+	}
+}
+
+.table-culc-name {
+	font-size: 24px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.table-petrol-range {
+	vertical-align: middle;
+}
+
+.table-result {
+	width: 220px;
+    margin-left: 40px;
+    border-radius: 5px;
+	background: url("../../images/bg-table.png") center no-repeat;
+	background-size: cover;
+
+	tr {
+		border-bottom: 1px solid black;
+    	box-shadow: 1px 1px 1px rgba(255,255,255,0.3);
+
+    	&:last-child {
+    		border-bottom: none;
+    		box-shadow: none;
+    	}
+	}
+
+	th {
+		width: 36%;
+		padding: 15px 0 15px;
+		font-size: 9px;
+		color: #ccc;
+		text-transform: uppercase;
+		text-align: center;
+
+		&:first-child {
+			width: 26%;
+		}
+	}
+
+	td {
+		padding: 10px 0 15px;
+		font: 24px LCD2B, sans-serif;
+		color: red;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}
+//end of BENEFITS
+
+//BONUS
+.bonus-category {
+	margin-top: -48px;
+	color: $color-word;
+	text-transform: uppercase;
+	background-color: rgba(0,0,0,.1);
+}
+
+.bonus-item,
+.bonus-name {
+	@extend .benefits-item;
+}
+
+.bonus-name {
+	padding: 15px 0;
+	border-top: 4px solid transparent; //for no conflicts with active 
+	border-right: 2px solid;
+	border-right-color: rgba(255,255,255,.5);
+	cursor: pointer;
+
+	&:last-child {
+		border-right: 0;
+	}
+}
+
+.bonus-type {
+	padding: 40px 0 30px;
+}
+
+.bonus-text {
+	padding: 15px 5px;
+}
+
+.bonus-info {
+	position: relative; //for triangle-tail
+	background: #fff0f1 url("../../images/info.png") 30px center no-repeat;
+	
+	.bonus-text {
+		padding: 15px 15px 15px 100px;
+	}
+}
+
+.bonus-tail {
+	position: absolute;
+	left: 30px;
+	top: -15px;
+	width: 34px;
+	height: 34px;
+	background: url("../../images/rect.png");
+}
+//end of BONUS
+
+//DISCOUNT
+.discount {
+	background: url("../../images/bg-discount.png") center no-repeat;
+	background-size: cover;
+}
+
+.discount-block {
+	width: 60%;
+	float: right;
+	overflow: hidden;
+	text-align: center;
+
+	@include respond-to(tablet){
+		width: 100%;
+	}
+}
+
+.discount-heading {
+	@extend .heading;
+	padding: 40px 0 10px;
+	font-weight: 700;
+}
+
+.discount-list {
+	text-align: center;
+}
+
+.discount-item {
+	display: inline-block;
+	width: 32%;
+	padding: 40px 10px;
+	vertical-align: top;
+
+	.discount-text {
+		padding-top: 10px;
+	}
+}
+//end of DISCOUNT
+
+//NEWS
+.news-row {
+	padding: 30px 0;
+}
+
+.news-link {
+	color: red;
+	text-decoration: underline;
+}
+
+.news-date {
+	padding: 15px 0;
+	font-size: 12px;
+	color: #8696a7;
+}
+
+.news-item-link {
+	color: black;
+
+	@include respond-to(tablet){
+		display: inline-block;
+		padding-bottom: 40px;
+	}
+
+	&:hover {
+		color: black;
+	}
+}
+//end of NEWS
+
+//MAP
+.map {
+	position: relative;
+	background: url("../../images/bg-map.png") center no-repeat;
+	background-size: cover;
+	height: 600px;
+}
+
+.map-row {
+	text-align: center;
+}
+
+.map-heading {
+	display: inline-block;
+	margin: 0 auto;
+	padding: 30px;
+	font-size: 60px;
+	text-transform: uppercase;
+	color: $color-word;
+	border-top: 3px solid $color-upper-line;
+	background-color: rgba(255,255,255,.8);
+
+	@include respond-to(tablet){
+		font-size: 30px;
+	}
+}
+
+.map-point {
+	width: 36px;
+	height: 36px;
+	position: absolute;
+	top: 190px;
+	left: 15%;
+	border-radius: 17px;
+	background: url("../../images/map-point.png");
+	cursor: pointer;
+
+	&:nth-child(2) {
+		top: 375px;
+		left: 29%;
+	}
+
+	&:nth-child(3) {
+		top: 395px;
+		left: 65%
+	}
+
+	&:last-child {
+		top: 150px;
+		left: 78%;
+	}
+
+	&:hover .map-point-tooltip {
+		visibility: visible;
+	}
+}
+
+.map-point-tooltip {
+	visibility: hidden;
+	position: absolute;
+	bottom: 135%;
+    left: -10%;
+	width: 238px;
+	padding: 20px;
+	font-size: 13px;
+	line-height: 20px;
+	background: white;
+	box-shadow: 0 1px 13px rgba(7, 8, 8, 0.22);
+
+	@include respond-to(wide){
+		width: 150px;
+		padding: 10px;
+	}
+
+	@include respond-to(tablet){
+		left: -55px;
+	}
+
+	@include respond-to(mobile){
+		width: 110px;
+		left: -45px;
+	}
+	
+	&:after {
+	    content: " ";
+	    position: absolute;
+	    bottom: -20%; 
+	    left: 10%;
+	    margin-left: -10px;
+	    border-width: 10px;
+	    border-style: solid;
+	    border-color: white transparent transparent transparent;
+	
+		@include respond-to(desktop){
+			border-color: transparent;
+		}
+	}
+}
+//end of MAP
+
+
+
+
+
